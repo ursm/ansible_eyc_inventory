@@ -38,9 +38,9 @@ module AnsibleEYCInventory
 
       say
 
-      index = ask('Choose an application:', limited_to: 1.upto(apps.size).map(&:to_s))
+      chosen = ask('Choose an application:', limited_to: 1.upto(apps.size).map(&:to_s))
 
-      apps[index.to_i.pred]
+      apps[chosen.to_i.pred]
     end
   end
 end
