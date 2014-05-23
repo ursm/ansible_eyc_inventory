@@ -1,4 +1,6 @@
-# Engine Yard Cloud Dynamic Inventory Script for Ansible
+# ansible_eyc_inventory
+
+Ansible dynamic inventory script generator for Engine Yard Cloud.
 
 ## Installation
 
@@ -10,6 +12,17 @@ $ gem install ansible_eyc_inventory
 
 ```
 $ ansible_eyc_inventory
+
+1  ursm / foo
+
+Choose an application: [1] 1
+      create  inventory/eyc_foo_production
+       chmod  inventory/eyc_foo_production
+$ ansible all -i inventory/eyc_foo_production -m ping
+ec2-xxx-xxx-xxx-xxx.ap-northeast-1.compute.amazonaws.com | success >> {
+    "changed": false,
+    "ping": "pong"
+}
 ```
 
 ## Contributing

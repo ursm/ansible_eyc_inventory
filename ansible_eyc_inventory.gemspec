@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = AnsibleEYCInventory::VERSION
   spec.authors       = ['Keita Urashima']
   spec.email         = ['ursm@ursm.jp']
-  spec.summary       = 'Engine Yard Cloud dynamic inventory script for Ansible'
+  spec.summary       = 'Ansible dynamic inventory script generator for Engine Yard Cloud'
   spec.homepage      = 'https://github.com/ursm/ansible_eyc_inventory'
   spec.license       = 'MIT'
 

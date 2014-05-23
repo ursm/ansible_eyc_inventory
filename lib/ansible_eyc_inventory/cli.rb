@@ -33,8 +33,8 @@ module AnsibleEYCInventory
       say
 
       print_table apps.map.with_index(1) {|app, i|
-        [i, app.hierarchy_name, app.app_type_id]
-      }.unshift([nil, 'Name', 'Type'])
+        [i, app.hierarchy_name]
+      }
 
       say
 
