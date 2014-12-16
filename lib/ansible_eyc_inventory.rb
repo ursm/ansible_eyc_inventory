@@ -2,7 +2,7 @@ require 'engineyard-cloud-client'
 require 'json'
 require 'pathname'
 require 'yaml'
-require 'Resolv'
+require 'resolve'
 
 module AnsibleEYCInventory
   EYRC_PATH = Pathname.new('~/.eyrc')
