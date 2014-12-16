@@ -2,6 +2,7 @@ require 'engineyard-cloud-client'
 require 'json'
 require 'pathname'
 require 'yaml'
+require 'resolv'
 
 module AnsibleEYCInventory
   EYRC_PATH = Pathname.new('~/.eyrc')
@@ -21,7 +22,8 @@ module AnsibleEYCInventory
               ansible_ssh_user:      env.username,
               eyc_amazon_id:         instance.amazon_id,
               eyc_availability_zone: instance.availability_zone,
-              eyc_status:            instance.status
+              eyc_status:            instance.status,
+              public_ip:             Resolv.getaddress(instance.hostname)
             }
           }
         }
